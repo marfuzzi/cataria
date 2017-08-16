@@ -8,6 +8,26 @@ block('toolbar').content()(function() {
             block: 'alternative-translation'
         },
         {
+            block: 'form',
+            method: 'POST',
+            action: '/addFile',
+            content: [
+                {
+                    block: 'attach',
+                    mods: { theme: 'islands',size: 'm' },
+                    name: 'attach-logo',
+                    button: 'Выберите файл'
+                },
+                {
+                    block: 'button',
+                    mods: { theme: 'islands', size: 'm', type: 'submit' },
+                    mix: { block: 'toolbar', elem: 'action' },
+                  //  url: '/addFile',
+                    text: 'Загрузить'
+                }
+            ]
+        },
+        {
             elem: 'buttons',
             content: [
                 {

@@ -131,5 +131,6 @@ module.exports = {
     saveMemory,
     updateTM,
     getYaTranslate,
-    downloadTrans
+    downloadTrans,
+    addFile
 };

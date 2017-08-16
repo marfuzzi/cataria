@@ -24,6 +24,7 @@ router
     .post('/translate', controllers.getYaTranslate)
     .post('/updateTM', controllers.updateTM)
     .post('/saveTM', ensureAuthenticated, controllers.saveMemory)
-    .get('/downloadTrans', ensureAuthenticated, controllers.downloadTrans);
+    .get('/downloadTrans', ensureAuthenticated, controllers.downloadTrans)
+    .get('/addTM', ensureAuthenticated, controllers.addTM);
 
 module.exports = router;
