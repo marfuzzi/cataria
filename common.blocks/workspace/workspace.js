@@ -67,11 +67,9 @@ provide(BEMDOM.decl(this.name, {
     },
 
     addTM: function() {
-       console.log(5);
     },
 
     getTranslation: function() {
-        console.log(5);
         var _this = this;
         // TODO: WTF?
         this._spinner && this._spinner.setMod('visible');
