@@ -25,6 +25,6 @@ router
     .post('/updateTM', controllers.updateTM)
     .post('/saveTM', ensureAuthenticated, controllers.saveMemory)
     .get('/downloadTrans', ensureAuthenticated, controllers.downloadTrans)
-    .get('/addTM', ensureAuthenticated, controllers.addTM);
+  //  .get('/addTM', ensureAuthenticated, controllers.addTM);
 
 module.exports = router;

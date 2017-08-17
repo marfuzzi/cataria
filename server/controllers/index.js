@@ -1,6 +1,6 @@
 const parseGHUrl = require('parse-github-url');
 const md2xliff = require('md2xliff');
-const renderer = require('../renderer');
+const renderer = require('../renderer').render;
 
 const Segment = require('../db').Segment;
 const helpers = require('../helpers');
@@ -131,6 +131,5 @@ module.exports = {
     saveMemory,
     updateTM,
     getYaTranslate,
-    downloadTrans,
-    addFile
+    downloadTrans
 };
