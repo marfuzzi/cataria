@@ -94,8 +94,7 @@ provide(bemDom.declBlock(this.name, {
     showAltTrans: function(e, unit) {
         var index = $(unit).data('index'),
             content = window.segments[index].altTrans;
-
-        this._altTrans = this.findChildBlock('alternative-translation');
+            this._altTrans && bemDom.replace(this._altTrans.domElem, content);
         bemDom.replace(this._altTrans.domElem, content);
         this._editorUnit = unit;
     },

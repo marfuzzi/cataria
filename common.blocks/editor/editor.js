@@ -77,7 +77,7 @@ provide(bemDom.declBlock(this.name, {
     },
 
     onFocusIn: function(e) {
-        this.setMod($(e.target.parentNode), 'focused').emit('showAltTrans', e.target);
+        this.setMod($(e.target.parentNode), 'focused')._emit('showAltTrans', e.target);
     },
 
     onFocusOut: function(e) {
@@ -106,7 +106,7 @@ provide(bemDom.declBlock(this.name, {
     onInit: function() {
         var ptp = this.prototype;
 
-        this._events('target')
+        this._domEvents('target')
             .on('focusin', ptp.onFocusIn)
             .on('focusout', ptp.onFocusOut)
             .on('paste', ptp.onInput);
