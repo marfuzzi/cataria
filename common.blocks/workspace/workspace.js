@@ -92,11 +92,9 @@ provide(bemDom.declBlock(this.name, {
     },
 
     showAltTrans: function(e, unit) {
-       // console.log('______________________________');
         var index = $(unit).data('index'),
             content = window.segments[index].altTrans;
-          //  console.log('12345',content);
-            this._altTrans && bemDom.replace(this._altTrans.domElem, content);
+            this._altTrans && bemDom.update(this._altTrans.domElem, content);
      //   bemDom.replace(this._altTrans.domElem, content);
         this._editorUnit = unit;
     },
