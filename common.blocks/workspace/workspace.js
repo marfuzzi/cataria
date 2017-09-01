@@ -76,6 +76,7 @@ provide(bemDom.declBlock(this.name, {
 
         $.post('/translate', { data: JSON.stringify(window.segments) })
             .then(function(response) {
+                console.log('response', response);
                 bemDom.replace(_this._editor.domElem, response);
                 _this._editor = _this.findChildBlock(Editor);
                 _this._spinner.delMod('visible');

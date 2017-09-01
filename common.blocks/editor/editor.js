@@ -77,7 +77,8 @@ provide(bemDom.declBlock(this.name, {
     },
 
     onFocusIn: function(e) {
-        this.setMod($(e.target.parentNode), 'focused')._emit('showAltTrans', e.target);
+        e.bemTarget.findParentElem('unit').setMod('focused');
+        this._emit('showAltTrans', e.target);
     },
 
     onFocusOut: function(e) {
@@ -85,7 +86,7 @@ provide(bemDom.declBlock(this.name, {
             index = elem.data('index');
 
         window.segments[index].target.content = elem.html();
-        this.delMod($(e.target.parentNode), 'focused');
+        e.bemTarget.findParentElem('unit').delMod('focused');
     },
 
     onInput: function(e) {
