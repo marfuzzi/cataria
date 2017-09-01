@@ -11,7 +11,6 @@ provide(bemDom.declBlock(this.name, {
                 this._altTrans = this.findChildBlock(AlternativeTranslation);
                 this._spinner = this.findChildBlock(Spinner);
                 this._attach = this.findChildBlock(Attach);
-
             }
         }
     },
@@ -95,8 +94,7 @@ provide(bemDom.declBlock(this.name, {
         var index = $(unit).data('index'),
             content = window.segments[index].altTrans;
             this._altTrans && bemDom.update(this._altTrans.domElem, content);
-     //   bemDom.replace(this._altTrans.domElem, content);
-        this._editorUnit = unit;
+            this._editorUnit = unit;
     },
 
     applyAltTrans: function(e, data) {
